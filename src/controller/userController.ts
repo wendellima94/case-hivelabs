@@ -57,10 +57,10 @@ export const createUser = async (req: Request, res: Response) => {
       password: passwordHash,
     });
 
-    return res.status(200).json({
-      newUser,
-    });
-
+    return res.status(200).json(
+      [{
+        newUser,
+      }]);
   } catch (error) {
     console.error(error);
     res.status(404).json({
