@@ -16,6 +16,7 @@ export const createUser = async (req: Request, res: Response) => {
       confirmPassword,
     } = req.body;
 
+    // tratando o erro de nickname já existente
     const nicknameInUse = await userModel.findOne({ nickname });
     if (nicknameInUse) {
       return res.status(400).json({
@@ -25,6 +26,7 @@ export const createUser = async (req: Request, res: Response) => {
       });
     }
 
+    // tratando o erro de email já existente
     const emailInUse = await userModel.findOne({ email });
     if (emailInUse) {
       return res.status(400).json({
@@ -34,6 +36,7 @@ export const createUser = async (req: Request, res: Response) => {
       });
     }
 
+    // tratando erro de confirmarção de password
     if (confirmPassword === "") {
       return res.status(400).json({
         errors: 'O campo precisa estar preenchido',
@@ -45,6 +48,7 @@ export const createUser = async (req: Request, res: Response) => {
       });
     }
 
+    // criptografando a senha do usuário
     const passwordHash = await bcryptjs.hash(password, 12);
 
     const newUser = await userModel.create({
@@ -65,7 +69,6 @@ export const createUser = async (req: Request, res: Response) => {
     console.error(error);
     res.status(404).json({
       message: 'Não foi possivel criar o usuário',
-      errors: error,
     });
   }
 };
