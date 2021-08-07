@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-import userModel from '../model/userModel';
+import userModel from '@models/userModel';
 
 export const updateLastNameAndAddress = async (req: Request, res: Response, next: NextFunction) => {
   try {

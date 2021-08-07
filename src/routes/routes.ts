@@ -1,8 +1,8 @@
 import express from 'express';
-import { showUser, showUserByNickname } from '../controller/searchUser';
-import { updateLastNameAndAddress } from '../controller/updateUser';
 
-import { createUser } from '../controller/createUser';
+import { showUser, showUserByNickname } from '@controllers/searchUser';
+import { updateLastNameAndAddress } from '@controllers/updateUser';
+import { createUser } from '@controllers/createUser';
 
 export const router = express.Router();
 // post routes

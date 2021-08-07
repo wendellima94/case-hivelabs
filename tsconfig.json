@@ -7,6 +7,11 @@
     "outDir": "build",
     "rootDir": ".",
     "removeComments": true,
+    "baseUrl": ".",
+    "paths": {
+      "@controllers/*": ["./src/controllers/*"],
+      "@models/*": ["src/models/*"],
+    },
     "typeRoots": [
       "./node_modules@types",
       "./src/@types"
@@ -17,9 +22,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*.ts", "test/**/*.ts"],
-  "baseUrl": ".",
-  "paths": {
-    "@controllers/*": ["./src/controllers/*"],
-    "@models/*": ["./src/models/*"],
-  }
+  
 }

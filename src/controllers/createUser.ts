@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcryptjs from "bcryptjs";
 
-import userModel from '../model/userModel';
+import userModel from '@models/userModel';
 
 export const createUser = async (req: Request, res: Response) => {
   try {
