@@ -26,6 +26,9 @@ export const updateLastNameAndAddress = async (req: Request, res: Response, next
 
     return res.status(200).json({ userSave });
   } catch (error) {
-    console.log(error);
+    res.status(404).json({
+      message: 'Não foi possivel realizar as alterações',
+      errors: error,
+    });
   }
 };

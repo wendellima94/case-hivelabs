@@ -2,7 +2,7 @@ import express from 'express';
 import { showUser, showUserByNickname } from '../controller/searchUser';
 import { updateLastNameAndAddress } from '../controller/updateUser';
 
-import { createUser } from '../controller/userController';
+import { createUser } from '../controller/createUser';
 
 export const router = express.Router();
 // post routes
