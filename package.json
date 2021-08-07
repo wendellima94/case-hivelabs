@@ -25,6 +25,6 @@
     "tslint-config-airbnb": "^5.11.2"
   },
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+    "dev": "ts-node-dev --respawn --ignore-watch node_modules --transpile-only ./src/index.ts"
   }
 }

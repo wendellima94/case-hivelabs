@@ -18,7 +18,7 @@ export default ({ dbConnect }: TInput) => {
       },
       )
       .then(() => {
-        return console.log(`Conexão com MongoDB realizada com sucesso! ${dbConnect}`);
+        return console.log(`Conexão com MongoDB realizada com sucesso! `);
       })
       // tslint:disable-next-line: ter-arrow-parens
       .catch(error => {
