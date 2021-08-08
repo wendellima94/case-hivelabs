@@ -26,10 +26,10 @@ informações.
  ***
  
  ## Como rodar a aplicação:
-
-1. Instale as depencias com o comando `yarn install`.
- 2. Rode o script com **ts-node-dev** ultilizando o comando `yarn dev`.
- 3. Ele iniciará na porta 3333 ou 4000, será exibido um **console** informando a rota iniciada.
+1. Ultilize as variavéis de ambiente enviadas por email no arquivo `.env` para realizar a ligação com o banco de dados.
+2. Instale as depencias com o comando `yarn install`. 
+ 3. Rode o script com **ts-node-dev** ultilizando o comando `yarn dev`.
+ 4. Ele iniciará na porta 3333 ou 4000, será exibido um **console** informando a rota iniciada.
 ***
 ## As rotas:
 
