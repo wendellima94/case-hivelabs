@@ -28,7 +28,9 @@ export const showUserByNickname = async (req: Request, res: Response) => {
 
     const findUser = await userModel.findOne({ nickname });
     if (!findUser) {
-      return res.status(400).json({ errors: { user: 'Esse usuário não existe' } });
+      return res.status(400).json({
+        errors: { user: 'Esse usuário não existe' },
+      });
     }
 
     return res.status(200).json({ showUser });

@@ -14,8 +14,8 @@ router.get('/finduser/:name', showUserByName);
 router.get('/finduserbynickname/:nickname', showUserByNickname);
 
 // put routes
-router.put('/find/:_id', updateLastNameAndAddress);
-router.put('/findnick/:_id', updateNickname);
+router.put('/updatelastnameandaddress/:_id', updateLastNameAndAddress);
+router.put('/updatenickname/:_id', updateNickname);
 
 // delete routes
 router.delete('/delete/:_id', deleteUser);
